@@ -12,4 +12,7 @@ public abstract class TranedTableMapper<KEY, VALUE, KEYOUT extends WritableCompa
 	private Tran<VALUE, VALUEOUT> valueTran;
 	
 	//TODO init trans
+	private void init() {
+
+	}
 }
