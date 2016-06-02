@@ -2,23 +2,25 @@ package easy.mapreduce.tran;
 
 import java.io.IOException;
 
-public class EmptyTran<T> implements Tran<T, T> {
+public class EmptyTran {
 	
 	private EmptyTran() {}
 	
 	@SuppressWarnings("unchecked")
-	public static <T> Tran<T, T> getInstance() {
-		return new EmptyTran<T>();
-	}
+	public static <FROM, TO> Tran<FROM, TO> getInstance() {
+		return new Tran<FROM, TO>() {
 
-	@Override
-	public T from(T from) throws IOException {
-		return from;
-	}
+			@Override
+			public TO from(FROM from) throws IOException {
+				return (TO) from;
+			}
 
-	@Override
-	public T to(T to) throws IOException {
-		return to;
+			@Override
+			public FROM to(TO to) throws IOException {
+				return (FROM) to;
+			}
+			
+		};
 	}
 
 }
