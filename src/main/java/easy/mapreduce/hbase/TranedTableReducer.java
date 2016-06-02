@@ -3,11 +3,9 @@ package easy.mapreduce.hbase;
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.apache.hadoop.hbase.client.Mutation;
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.mapreduce.TableReducer;
 import org.apache.hadoop.io.WritableComparable;
-import org.apache.hadoop.mapreduce.Reducer;
 import org.springframework.core.GenericTypeResolver;
 
 import easy.mapreduce.exceptions.TranedRuntimeException;
