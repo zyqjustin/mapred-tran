@@ -6,8 +6,8 @@ import org.apache.hadoop.hbase.mapreduce.TableMapper;
 import org.apache.hadoop.io.WritableComparable;
 import org.springframework.core.GenericTypeResolver;
 
-import easy.mapreduce.tran.EmptyTran;
 import easy.mapreduce.tran.Tran;
+import easy.mapreduce.tran.impl.EmptyTran;
 
 /**
  * 
