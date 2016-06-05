@@ -9,8 +9,8 @@ import org.apache.hadoop.io.WritableComparable;
 import org.springframework.core.GenericTypeResolver;
 
 import easy.mapreduce.exceptions.TranedRuntimeException;
-import easy.mapreduce.tran.EmptyTran;
 import easy.mapreduce.tran.Tran;
+import easy.mapreduce.tran.impl.EmptyTran;
 
 /**
  * 
