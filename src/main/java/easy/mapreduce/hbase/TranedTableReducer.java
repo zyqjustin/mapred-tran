@@ -71,7 +71,7 @@ public abstract class TranedTableReducer<KEY, VALUE, KEYIN extends WritableCompa
 	 * @param toClass
 	 * @return
 	 */
-	private <F, T> Tran<F, T> getTran(Class<F> fromClass, Class<T> toClass) {
+	protected <F, T> Tran<F, T> getTran(Class<F> fromClass, Class<T> toClass) {
 		throw new UnsupportedOperationException("unsupport class tran.");
 	}
 	
@@ -114,7 +114,7 @@ public abstract class TranedTableReducer<KEY, VALUE, KEYIN extends WritableCompa
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
-	protected abstract void tranedReduce(KEY key, ValueIterTran valueIterTran, Context context) throws IOException, InterruptedException;
+	protected abstract void tranedReduce(KEY key, Iterable<VALUE> values, Context context) throws IOException, InterruptedException;
 
 	// TODO method for report error data cell
 	
